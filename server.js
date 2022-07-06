@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const favicon = require('serve-favicon');
+
 const app = express();
  
 const forceSSL = function () {
@@ -16,7 +16,7 @@ const forceSSL = function () {
 app.use(express.static('./dist/cualo-port-v1'));
  
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname,'/dist/cualo-port-v1/index.html'));
+  res.sendFile(path.join('index.html','/dist/cualo-port-v1/'));
 });
  
 app.use(forceSSL());
