@@ -16,7 +16,7 @@ const forceSSL = function () {
 app.use(express.static('./dist/cualo-port-v1'));
  
 app.get('/*', function (req, res) {
-  res.sendFile(path.join('index.html','/dist/cualo-port-v1/'));
+  res.sendFile(path.join(__dirname,'/dist/cualo-port-v1/index.html'));
 });
  
 app.use(forceSSL());
